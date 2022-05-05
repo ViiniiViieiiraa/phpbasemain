@@ -5,10 +5,10 @@ include 'connect.php';
 
 if(isset($_POST['sub'])){
     
-    $nameCity=$_POST['nameCity'];
+    $nameProduto=$_POST['nameProduto'];
 
     // $i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
-    $i = "insert into city(nameCity) values ('$nameCity')";
+    $i = "insert into produto(nameProduto) values ('$nameProduto')";
     mysqli_query($con, $i);
 }
 ?>
@@ -23,8 +23,8 @@ if(isset($_POST['sub'])){
             <table>
                 <tr>
                     <td>
-                        Nome cidade:
-                        <input type="text" name="nameCity">
+                        Nome produto:
+                        <input type="text" name="nameProduto">
                     </td>
                 </tr>
                 
@@ -33,7 +33,7 @@ if(isset($_POST['sub'])){
                         <input type="submit" value="enviar" name="sub">         
                     </td>
                     <td>
-                        <a href="viewall_city.php"> Cidades Cadastradas </a>
+                        <a href="viewall_produto.php"> Produtos Cadastradas </a>
                     </td>
                 </tr>
             </table>

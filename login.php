@@ -7,7 +7,7 @@ if(isset($_POST['sub'])){
     $u=$_POST['user'];
     $p=$_POST['pass'];
     
-   $s= "select * from reg where username='$u' and password= '$p'";   
+   $s= "select * from categoria where username='$u' and password= '$p'";   
    $qu= mysqli_query($con, $s);
    if(mysqli_num_rows($qu)>0){
       $f= mysqli_fetch_assoc($qu);
@@ -27,7 +27,7 @@ if(isset($_POST['sub'])){
         <title></title>
     </head>
     <body>
-        <h1> Login - Vinizin </h1>
+        <h1> Login - Do Usuario </h1>
         <form method="POST" enctype="multipart/form-data">
             <table>
                 
@@ -48,7 +48,7 @@ if(isset($_POST['sub'])){
                         <input type="submit" name="sub" value="submit">
                     </td>
                     <td>
-                        <a href="reg.php">cadastrar</a>
+                        <a href="categoria.php">cadastrar</a>
                     </td>
                     
                 </tr>

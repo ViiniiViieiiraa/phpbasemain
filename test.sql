@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `reg`
 --
 
-CREATE TABLE `reg` (
+CREATE TABLE `categoria` (
   `name` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `city` varchar(15) NOT NULL,
+  `produto` varchar(15) NOT NULL,
   `image` varchar(50) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `id` int(11) NOT NULL
@@ -42,7 +42,7 @@ CREATE TABLE `reg` (
 -- Extraindo dados da tabela `reg`
 --
 
-INSERT INTO `reg` (`name`, `username`, `password`, `city`, `image`, `gender`, `id`) VALUES
+INSERT INTO `categoria` (`name`, `username`, `password`, `produto`, `image`, `gender`, `id`) VALUES
 ('Bikash', 'bikash', 'bikash', 'lko', 'image/images.png', 'male', 2);
 
 --
@@ -52,7 +52,7 @@ INSERT INTO `reg` (`name`, `username`, `password`, `city`, `image`, `gender`, `i
 --
 -- Índices para tabela `reg`
 --
-ALTER TABLE `reg`
+ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -62,7 +62,7 @@ ALTER TABLE `reg`
 --
 -- AUTO_INCREMENT de tabela `reg`
 --
-ALTER TABLE `reg`
+ALTER TABLE `categoria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 

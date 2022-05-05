@@ -5,14 +5,14 @@ if(isset($_POST['sub'])){
     $t=$_POST['text'];
     $u=$_POST['user'];
     $p=$_POST['pass'];
-    $c=$_POST['city'];
+    $c=$_POST['produto'];
     $g=$_POST['gen'];
 
     if($_FILES['f1']['name']){
         move_uploaded_file($_FILES['f1']['tmp_name'], "image/".$_FILES['f1']['name']);
         $img="image/".$_FILES['f1']['name'];
     }
-    $i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
+    $i="insert into categoria(name,username,password,produto,image,gender)value('$t','$u','$p','$c','$img','$g')";
     mysqli_query($con, $i);
 }
 ?>
@@ -45,16 +45,16 @@ if(isset($_POST['sub'])){
                 </tr>
                 <tr>
                     <td>
-                        city
-                        <select name="city">
+                        Produto
+                        <select name="produto">
                             <option value="">-select-</option>
                             <?php
-                            $sqlCity= mysqli_query($con, "select * from city");
+                            $sqlProduto= mysqli_query($con, "select * from Produto");
                                                         
-                            while($item = mysqli_fetch_assoc($sqlCity))
+                            while($item = mysqli_fetch_assoc($sqlProduto))
                             {
-                                $nomeItem = $item['nameCity'];
-                                $idCity = $item['idCity'];
+                                $nomeItem = $item['nameProduto'];
+                                $idProduto = $item['idProduto'];
                                 echo "                                
                                     <option value=$nomeItem>$nomeItem</option>                                
                                 ";

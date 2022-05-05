@@ -4,7 +4,7 @@ if(isset($_POST['sub'])){
     $t=$_POST['text'];
     $u=$_POST['user'];
     $p=$_POST['pass'];
-    $c=$_POST['city'];
+    $c=$_POST['produto'];
     $g=$_POST['gen'];
     if($_FILES['f1']['name']){
     move_uploaded_file($_FILES['f1']['tmp_name'], "image/".$_FILES['f1']['name']);
@@ -13,11 +13,11 @@ if(isset($_POST['sub'])){
     else{
         $img=$_POST['img1'];
     }
-    $i="update reg set name='$t',username='$u',password='$p',city='$c',gender='$g',image='$img' where id='$_SESSION[id]'";
+    $i="update categoria set name='$t',username='$u',password='$p',produto='$c',gender='$g',image='$img' where id='$_SESSION[id]'";
     mysqli_query($con, $i);
     header('location:home.php');
 }
-     $s="select*from reg where id='$_SESSION[id]'";
+     $s="select*from categoria where id='$_SESSION[id]'";
     $qu= mysqli_query($con, $s);
     $f=mysqli_fetch_assoc($qu);
     ?> 
@@ -43,11 +43,11 @@ if(isset($_POST['sub'])){
                 </tr>
                 <tr>
                     <td>
-                        city
-                        <select name="city">
+                        produto
+                        <select name="produto">
                             <option value="">-select-</option>
-                            <option value="knp"<?php if($f['city']=='knp'){ echo "selected='selected'";}?>>kanpur</option>
-                            <option value="lko"<?php if($f['city']=='lko'){ echo "selected='selected'";}?>>lucknow</option>
+                            <option value="knp"<?php if($f['produto']=='knp'){ echo "selected='selected'";}?>>kanpur</option>
+                            <option value="lko"<?php if($f['produto']=='lko'){ echo "selected='selected'";}?>>lucknow</option>
                     </td>
                 </tr>
                 <tr>

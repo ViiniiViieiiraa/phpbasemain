@@ -1,7 +1,7 @@
 <?php
 include 'connect.php';
 ?>
-<a href=reg_city.php>Adicioanar Cidade</a>
+<a href=reg_produto.php>Adicioanar Produto</a>
 <table border='1'>
     <tr>
         <th>
@@ -16,19 +16,19 @@ include 'connect.php';
     </tr>
 
 <?php
-$sq="select * from city";
+$sq="select * from produto";
 $qu=mysqli_query($con,$sq);
 while($f=  mysqli_fetch_assoc($qu)){
     ?>
     <tr>
         <td>
-            <?php echo $f['idCity']?>
+            <?php echo $f['idProduto']?>
         </td>
         <td>
-            <?php echo $f['nameCity']?>
+            <?php echo $f['nameProduto']?>
         </td>
         <td>
-            <a href="delete_city.php"> Remover</a>
+            <a href="delete_produto.php"> Remover</a>
         </td>
     </tr>
     <?php
