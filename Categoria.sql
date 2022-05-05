@@ -33,8 +33,6 @@ CREATE TABLE `categoria` (
   `username` varchar(20) NOT NULL,
   `password` varchar(50) NOT NULL,
   `produto` varchar(15) NOT NULL,
-  `image` varchar(50) NOT NULL,
-  `gender` varchar(10) NOT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -42,8 +40,8 @@ CREATE TABLE `categoria` (
 -- Extraindo dados da tabela `reg`
 --
 
-INSERT INTO `categoria` (`name`, `username`, `password`, `produto`, `image`, `gender`, `id`) VALUES
-('Bikash', 'bikash', 'bikash', 'lko', 'image/images.png', 'male', 2);
+INSERT INTO `categoria` (`name`, `username`, `password`, `produto`, `id`) VALUES
+('Vinicius', 'Vini', '123', 'lko', 2);
 
 --
 -- Índices para tabelas despejadas

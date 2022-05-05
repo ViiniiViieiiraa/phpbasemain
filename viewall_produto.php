@@ -8,7 +8,7 @@ include 'connect.php';
             Id
         </th>
         <th>
-            Cidade
+            Produto
         </th>
         <th>
             Excluir
